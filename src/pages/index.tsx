@@ -4,9 +4,7 @@ import Landing from "@/components/pages/Landing";
 export default function Home() {
   return (
     <>
-    {/* <div className="h-[100vh]"> */}
-    <Landing />
-    {/* </div> */}
+      <Landing />
       <Footer />
     </>
   );
