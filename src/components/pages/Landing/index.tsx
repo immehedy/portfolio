@@ -1,36 +1,48 @@
-import Header from "@/components/layout/Header"
-import Image from "next/image"
+import Header from "@/components/layout/Header";
+import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const Landing = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% h-[100vh]">
-      <Header/>
-      <div className="container mx-auto grid md:grid-cols-2 md:gap-2 items-center">
-        <div className="px-4">
-          <h3 className="text-[60px] font-semibold text-white">Mehedy Hassan</h3>
+    <div className="bg-gradient-to-r from-[#F0DBDB] from-10% via-[#F5EBE0] via-30% to-[#F8F4EA] to-90% h-[100vh]">
+      <Header />
+      <div className="container mx-auto grid md:grid-cols-3 items-center md:mt-[5%]">
+        <div className="col-span-2">
+          <h3 className="text-[40px] md:text-[60px] font-semibold text-gray-600">
+            Mehedy Hassan
+          </h3>
           <TypeAnimation
-      sequence={[
-        'Full Stack Developer', // Types 'One'
-        2000, // Waits 1s
-        'Software Engineer', // Deletes 'One' and types 'Two'
-        2000, // Waits 2s
-        'Problem Solver',
-
-        () => {
-          console.log('Sequence completed'); // Place optional callbacks anywhere in the array
-        }
-      ]}
-      wrapper="span"
-      cursor={true}
-      repeat={Infinity}
-      style={{ fontSize: '2em', color: '#d1d5da', fontWeight: 400  }}
-    />
+            sequence={[
+              "Full Stack Developer",
+              2000,
+              "Software Engineer",
+              2000,
+              "Problem Solver",
+            ]}
+            wrapper="span"
+            cursor={true}
+            repeat={Infinity}
+            style={{ fontSize: "2em", color: "#565762", fontWeight: 400 }}
+          />
+          <p className="text-lg text-gray-800">
+            Experienced full stack developer with expertise in React JS, Next
+            JS, Tailwind CSS, JavaScript, Jest, Laravel, and PHP. Committed to
+            high-quality code coverage, unit testing, and creating scalable and
+            reliable solutions.
+          </p>
         </div>
-      <Image className="mx-auto" src="/images/avatar.png" height={400} width={400} alt="avatar"/>
+        <div className="">
+          <Image
+            className="mx-auto"
+            src="/images/avatar.png"
+            height={400}
+            width={400}
+            alt="avatar"
+          />
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;
